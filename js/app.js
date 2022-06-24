@@ -62,12 +62,25 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
+/**
+ * 
+ * @param {number} a 
+ * @param {number} b 
+ * @param {number} c 
+ * @return {Array} - sum, product, string, string
+ */
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-
+    let theSum = sum(a,b)[0];
+    theSum = sum (c, theSum)[0];
+    let theProduct = multiply(a, b)[0];
+    theProduct = multiply (c, theProduct)[0];
+    let result = theSum + theProduct
+    let resultsString = `${a} and ${b} and ${c} sum to ${result}.`
+    return [result, resultsString];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
